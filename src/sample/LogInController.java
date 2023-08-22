@@ -121,7 +121,7 @@ public class LogInController implements Initializable {
                 alert.setContentText("Please fill in field");
                 alert.show();
             } else {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
                 psCheckCourseExist = connection.prepareStatement("SELECT * FROM enrollment WHERE student_id = ? AND course_id = ?" );
                 psCheckCourseExist.setInt(1, Integer.parseInt(label_studentid.getText()));
                 psCheckCourseExist.setInt(2, Integer.parseInt(tf_input.getText()));
@@ -184,7 +184,7 @@ public class LogInController implements Initializable {
                 alert.setContentText("Please fill in field");
                 alert.show();
             } else {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
                 psRemove = connection.prepareStatement("delete from schedule\n" +
                         "where student_id = ? AND course_id = ?");
                 psRemove.setInt(1, Integer.parseInt(label_studentid.getText()));
@@ -228,7 +228,7 @@ public class LogInController implements Initializable {
                 alert.show();
             } else {
 
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
                 switch(selectedItem){
                     case 0 :
                         input = ("student.first_name"); break;
@@ -274,7 +274,7 @@ public class LogInController implements Initializable {
 
         try {
 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
             ps = connection.prepareStatement("delete from registration\n" +
                     "where student_student_id = ?;");
             ps.setInt(1, Integer.parseInt(label_studentid.getText()));

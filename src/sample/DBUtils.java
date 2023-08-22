@@ -31,7 +31,7 @@ public class DBUtils {
                 root = loader.load();
 
                 // new
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
                 psModify = connection.prepareStatement("SELECT first_name, last_name, address, phone_number, email, date_of_birth FROM student WHERE student_id = ?");
                 psModify.setInt(1, studentId);
                 resultSet = psModify.executeQuery();
@@ -70,7 +70,7 @@ public class DBUtils {
         ResultSet resultSet = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
             psCheckUserExist = connection.prepareStatement("SELECT * FROM registration WHERE username = ?");
             psCheckUserExist.setString(1, username);
             resultSet = psCheckUserExist.executeQuery();
@@ -121,8 +121,8 @@ public class DBUtils {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        try {                                                   //"jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce"
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+        try {                                                   //"jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023"
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
             preparedStatement = connection.prepareStatement("SELECT password, student_student_id FROM registration WHERE username = ?");
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();
@@ -179,7 +179,7 @@ public class DBUtils {
         Connection connection = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "REDbloodyjust^ce");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "DBMprojectspr2023");
         ObservableList<Users> list = FXCollections.observableArrayList();
         try {
             ps = connection.prepareStatement("select course.course_id, course.course_name, course.instructor_name, schedule.start_time, schedule.end_time, schedule.room_number\n" +
