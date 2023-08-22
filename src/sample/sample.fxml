@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="294.0" style="-fx-background-color: #ef1838;">
+         <children>
+            <ImageView fitHeight="128.0" fitWidth="127.0" layoutX="60.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@usericon.png" />
+               </image></ImageView>
+            <Label layoutX="8.0" layoutY="178.0" prefHeight="78.0" prefWidth="231.0" text="XYZ University Student Portal" textAlignment="CENTER" textFill="#ffbc00" wrapText="true">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="406.0" style="-fx-background-color: #f5cd96;">
+         <children>
+            <ImageView fitHeight="218.0" fitWidth="127.0" layoutX="115.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@uniicon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="36.0" layoutY="215.0" prefHeight="32.0" prefWidth="96.0" text="Username" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="MT Extra" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="247.0" prefHeight="32.0" prefWidth="96.0" text="Password" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="MT Extra" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="279.0" prefHeight="32.0" prefWidth="96.0" text="StudentID" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="MT Extra" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_username" layoutX="115.0" layoutY="219.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tf_password" layoutX="115.0" layoutY="250.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tf_studentid" layoutX="115.0" layoutY="282.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="button_login" layoutX="174.0" layoutY="317.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="65.0" style="-fx-background-color: #ef1838; -fx-cursor: hand;" text="Login" textAlignment="CENTER" textFill="#ffbc00">
+               <font>
+                  <Font name="MT Extra" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="134.0" layoutY="366.0" prefHeight="18.0" prefWidth="72.0" text="New User?" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="button_register" layoutX="188.0" layoutY="363.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register here" textFill="#001fff" underline="true" />
+         </children></AnchorPane>
+   </children>
+</HBox>

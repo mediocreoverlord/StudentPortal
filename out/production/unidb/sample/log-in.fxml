@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="117.0">
+         <children>
+            <Label fx:id="label_welcome" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="8.0" prefHeight="53.0" prefWidth="91.0" text="Welcome Student" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="label_studentid" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="61.0" prefHeight="25.0" prefWidth="57.0" text="StudentID" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="button_updateinfo" layoutX="16.0" layoutY="97.0" mnemonicParsing="false" onAction="#updateInfo" style="-fx-cursor: hand;" text="Update Info" />
+            <Button fx:id="button_addcourse" layoutX="8.0" layoutY="136.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="25.0" prefWidth="91.0" style="-fx-cursor: hand;" text="Add a class" />
+            <Button fx:id="button_deletecourse" layoutX="4.0" layoutY="175.0" mnemonicParsing="false" onAction="#deleteCourse" prefHeight="25.0" prefWidth="103.0" style="-fx-cursor: hand;" text="Delete a class" />
+            <Button fx:id="button_logout" layoutX="8.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" style="-fx-cursor: hand;" text="Logout" />
+            <Button fx:id="button_deleteacc" layoutX="2.0" layoutY="252.0" mnemonicParsing="false" onAction="#deleteAcc" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Delete Account" textAlignment="CENTER" underline="true" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="65.0" prefHeight="17.0" prefWidth="25.0" text="ID#:" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="485.0">
+         <children>
+            <VBox prefHeight="413.0" prefWidth="488.0">
+               <children>
+                  <AnchorPane prefHeight="153.0" prefWidth="488.0">
+                     <children>
+                        <TableView fx:id="table" fixedCellSize="60.0" layoutY="1.0" prefHeight="208.0" prefWidth="490.0">
+                          <columns>
+                            <TableColumn fx:id="table_courseid" prefWidth="64.0" text="course ID" />
+                              <TableColumn fx:id="table_coursename" prefWidth="111.0" text="course name" />
+                              <TableColumn fx:id="table_prof" prefWidth="85.0" text="professor" />
+                              <TableColumn fx:id="table_starttime" prefWidth="71.0" text="start time" />
+                              <TableColumn fx:id="table_endtime" prefWidth="81.0" text="end time" />
+                              <TableColumn fx:id="table_room" prefWidth="77.0" text="room #" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                  <AnchorPane prefHeight="182.0" prefWidth="490.0">
+                     <children>
+                        <ListView fx:id="list_studinfo" editable="true" fixedCellSize="20.0" layoutX="51.0" layoutY="23.0" prefHeight="149.0" prefWidth="132.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="6.0" prefHeight="15.0" prefWidth="79.0" text="Student Info" wrapText="true" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="3.0" prefHeight="102.0" prefWidth="254.0" text="Type course ID number to add/delete a course. To add/update student info select field and type in order first name, last name, address, phone #, email, date of birth. Click corresponding buttons to execute/save after each edit." wrapText="true" />
+                        <TextField fx:id="tf_input" layoutX="211.0" layoutY="113.0" prefHeight="17.0" prefWidth="183.0" />
+                        <Label fx:id="label_studentid12" alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="16.0" prefHeight="132.0" prefWidth="42.0" wrapText="true" />
+                     </children></AnchorPane>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </children>
+</HBox>
